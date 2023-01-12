@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<title>User Profile </title>
+	<link rel="canonical" href="http://cartoonnetwork.com.ar/user/profile/" />
+		<link rel="shortcut icon" href="../../toonla/images/cn30/site/static/img/favicon.ico" type="image/x-icon">
+        <link href="../../toonla/images/cn30/site/static/bundle-bundle_css_head.min.css" type="text/css" rel="stylesheet" media="screen, projection"/>
+<link href="../../toonla/images/cn30/site/static/bundle-bundle_userProfile_head.min.css" type="text/css" rel="stylesheet" media="screen, projection"/>
+	</head>
+	<body id="" class=" es" itemscope itemtype="">
+        <!-- BEGIN header -->
+<div id="header" class="clearfix">
+    <div class="contenedor clearfix">
+        <!-- BEGIN modulo.nowOnCartoon -->
+        <div id="nowOnCartoon" class="loading">
+            <div class="imagen">
+                <img src="../../toonla/images/cn30/site/static/img/pixel.gif" alt="" width="62" height="44"/>
+            </div>
+            <p class="hora"></p>
+            <a href="../../programacion/" class="bt-mas"></a>
+            <div class="nombre_holder">
+                <p class="nombre"></p>
+            </div>
+        </div>
+        <!-- END modulo.nowOnCartoon -->
+        <!-- BEGIN modulo.header_ad -->
+        <div id="header_ad" class="clearfix">
+            <div class="content">
+                <script type="text/javascript">
+    var adtech_adurl_1513033 = 'http://adserver.adtech.de/addyn|3.0|755|1513033|0|225|ADTECH;loc=100;target=_blank;misc='+new Date().getTime()+'';
+    document.writeln('<DIV ID="ADTECH_AdContainer_1513033"><IFRAME ID="ADTECH_IFRAME_1513033" FRAMEBORDER="0" STYLE="display:none;width: 1px; height: 1px;" SRC="/stubfile"></IFRAME></DIV>');
+</script>
+            </div>
+            <div class="text">PUBLICIDAD</div>
+        </div>
+        <!-- END modulo.header_ad -->
+    </div>
+</div><!-- END header -->
+<!-- BEGIN navbar -->
+<div id="navbar">
+    <div class="bg"></div>
+            <!-- BEGIN modulo.cnLogo -->
+<div id="cnLogo">
+    <h1><a class="cnLogo-btn" href="/"></a></h1>
+    <div class="nameFooter"></div>
+</div><!-- END modulo.cnLogo -->
+        <!-- BEGIN modulo.userBar -->
+<div id="userBar" data-service-url="https://auth.cartoonnetworkla.com/login/login">
+    <!--BEGIN loginForm -->
+    <div id="navbar_login_form" class="hide">
+        <form method="POST">
+            <input type="text" id="navbar_login_form_usuario" placeholder="Usuario" name="user" autocomplete="off"/>
+            <input type="password" id="navbar_login_form_password" placeholder="Contraseña" name="password" autocomplete="off"/>
+            <button class="enviar-btn" type="button"></button>
+            <button class="ayuda-btn" type="button"></button>
+        </form>
+    </div><!-- END loginForm -->
+    <!-- BEGIN logueadoForm -->
+    <div id="navbar_logueado_form" class="hide">
+        <!--avatar-->
+        <div class="img_avatar">
+            <a href="../../user/profile/">
+                <img src="../../toonla/images/cn30/site/static/img/modulos/login/avatar_logueado.png" alt="Avatar" width="51" height="51"/>
+            </a>
+        </div>
+        <!-- TODO: there are some hardcode values here: medallas, puntos, creditos, cantidad, nombre -->
+        <!--medallas-->
+        <div class="medallas">
+            <p>0</p>
+        </div>
+        <!--puntos-->
+        <div class="puntos">
+            <p>000000</p>
+        </div>
+        <!--creditos-->
+        <div class="creditos">
+            <a class="bt-tuscreditos">+</a>
+        </div>
+        <!--barra carga-->
+        <div class="containerBarra">
+            <div class="barrita">
+                <div class="cantidad">0 de 5</div>
+                <div class="barracarga"></div>
+            </div>
+            <div class="nombre"></div>
+        </div>
+        <a class="bt-cerrar"></a>
+        <div class="cb"></div>
+    </div><!-- END logueadoForm -->
+</div><!-- END modulo.userBar -->
+            <!-- BEGIN modulo.searchBar -->
+<div id="searchBar">
+    <input type="text" name="search" class="inputSearch" placeholder="Buscar"/>
+    <a class="bt-x hide"></a>
+</div><!-- END modulo.searchBar -->
+</div><!-- END navbar -->
+<!-- BEGIN contenido -->
+<!--
+   replace user.credit and user.userName with: getUserCredits and getUserName
+   check session.status
+-->
+<div id="contenido">
+    <div id="userProfile">
+        <div class="user">
+            <div class="avatar invisible">
+                <div class="img">
+                    <div id="userProfileAvatarSwf"></div>
+                </div>
+                <div class="nickname"></div>
+                <div class="credits">
+                    <img src="../../toonla/images/cn30/site/static/img/modulos/userProfile/icon-credits.png" alt="Creditos" width="16" height="15"/>
+                    <span class="credits-value">000000</span>
+                </div>
+            </div>
+            <a href="../../user/toonix/" class="btn">
+                <img src="../../toonla/images/cn30/site/static/img/modulos/userProfile/flecha.jpg" alt="EDITAR TOONIX" width="24" height="24"/>
+                EDITAR TOONIX
+            </a>
+            <a href="../../user/edit/" class="btn">
+                <img src="../../toonla/images/cn30/site/static/img/modulos/userProfile/flecha.jpg" alt="MIS DATOS" width="24" height="24"/>
+                MIS DATOS
+            </a>
+            <a class="btn creditsPopup">
+                <img src="../../toonla/images/cn30/site/static/img/modulos/userProfile/flecha.jpg" alt="CARGAR CRÉDITOS" width="24" height="24"/>
+                CARGAR CRÉDITOS
+            </a>
+            <div class="footerCredits">
+                <div class="imgAvatar"><img src="../../toonla/images/cn30/site/static/img/modulos/userProfile/avatar_footer.png" alt="" width="50" height="46"/></div>
+                <p class="txt1">ENVÍA AL 25125:</p>
+                <p class="nickBlock"></p>
+                <p class="txt2">Y CARGA 250 CRÉDITOS</p>
+            </div>
+        </div>
+        <div class="nivel loading">
+            <div class="title">MI <span class="destacar">NIVEL</span></div>
+            <div id="barraNivel" class="invisible">
+                <a class="btn-info"></a>
+                <div class="bar"></div>
+                <div class="progressBar"></div>
+                <div class="bgBar"></div>
+                <div class="listNiveles"></div>
+            </div>
+            <div id="infoNiveles">
+                <a class="btn-cerrar">CERRAR</a>
+                <p class="titleinfo">PARA SUBIR TU NIVEL</p>
+                <div class="steps"><img src="../../toonla/images/cn30/site/static/img/modulos/userProfile/icon_game.jpg" alt="Juegos" width="31" height="31"/><br/>JUEGA MUCHO<br/>Y GANA MEDALLAS</div>
+                <div class="steps"><img src="../../toonla/images/cn30/site/static/img/modulos/userProfile/icon_video.jpg" alt="Videos" width="31" height="31"/><br/>MIRA VIDEOS</div>
+                <div class="steps last">
+                    <img src="../../toonla/images/cn30/site/static/img/modulos/userProfile/icon_toonix.jpg" alt="MUNDO TOONIX" width="31" height="31"/><br/>
+                    VISITA MUNDO TOONIX<br/>
+                    DIVIÉRTETE EN TU CUBO<br/>
+                    HAZ NUEVOS AMIGOS
+                </div>
+            </div>
+            <div class="footer">
+                <div class="millas">Millas Acumuladas:<br/>Para pro. nivel faltan:</div>
+                <div class="millasNros">0<br/><span class="untilNextLevel">0</span></div>
+            </div>
+        </div>
+        <div class="medallas">
+            <div class="title">MIS <span class="destacar">MEDALLAS</span><span class="nro"></span></div>
+            <div class="listMedals loading"></div>
+            <a href="../../user/medals/" class="btn-verMedallero">
+                <img src="../../toonla/images/cn30/site/static/img/modulos/userProfile/flecha.jpg" alt="VER MEDALLERO" width="24" height="24"/>
+                VER MEDALLERO
+            </a>
+        </div>
+        <div class="amigos">
+            <div class="title">MIS <span class="destacar">AMIGOS</span></div>
+            <div class="listaamigos"></div>
+        </div>
+    </div>
+    <div class="cb"></div>
+</div>
+<!-- END contenido -->
+        <!-- BEGIN modulo.siteFooter -->
+<div id="siteFooter">
+    <div class="contenedor">
+        <a class="logo" href="/"></a>
+        <p class="desc">Juegos y videos gratis de Ben 10, Hora de Aventura con Finn y Jake, Un show mas, La CQ, Gumball y muchos mas. ¡Crea tu Toonix y arma tu cubo!</p>
+          <div class="accesoMundoToonix">
+            <a href="../../toonix/">
+              <img class="accesoMundoToonixImg" src="../../toonla/images/cn30/site/static/img/modulos/footer/mundotoonix.es.png" alt="MUNDO TOONIX" title="MUNDO TOONIX" width="300" height="140"/>
+            </a>
+          </div>
+    </div>
+      <div class="menu">
+          <div class="menuLinks">
+              <a href="../../parentalControl/" target="_blank" title="PADRES">PADRES</a>
+              <a href="../../secureNavigationTips/" target="_blank" title="TIPS DE SEGURIDAD">TIPS DE SEGURIDAD</a>
+              <a href="../../toonla/images/cn30/site/misc/tcm/TCM_Book_Spanish.pdf" target="_blank" title="MOVIMIENTO CARTOON">MOVIMIENTO CARTOON</a>
+              <a href="../../programacion/" target="_blank" title="PROGRAMACIÓN">PROGRAMACIÓN</a>
+              <a href="../../help/" target="_blank" title="AYUDA">AYUDA</a>
+          </div>
+      </div>
+      <div id="nav-menu">
+          <div id="nav-menu-btn" class="clearfix">
+            <span class="nav-menu-btn-arrow">&#9660;</span>
+            <span class="nave-menu-btn-text">Shows de Cartoon Network</span>
+            <span class="nav-menu-btn-arrow">&#9660;</span>
+          </div>
+          <div id="nav-menu-list">
+                  <a href="../../show/cuentos-espantosos-para-ninos-caprichosos/" class="nav-menu-link" title="Cuentos espantosos para niños caprichosos">Cuentos espantosos para ni&ntilde;os caprichosos</a>
+                  <a href="../../show/tio-grandpa/" class="nav-menu-link" title="Tío Grandpa">T&iacute;o Grandpa</a>
+                  <a href="../../show/ben-10-fuerza-alienigena/" class="nav-menu-link" title="Ben 10 Fuerza Alienígena - Cartoon Network">Ben 10 Fuerza Alien&iacute;gena - Cartoon Network</a>
+                  <a href="../../show/el-increible-mundo-de-gumball/" class="nav-menu-link" title="El Increíble Mundo de Gumball">El Incre&iacute;ble Mundo de Gumball</a>
+                  <a href="../../show/hora-de-aventura/" class="nav-menu-link" title="Hora de Aventura">Hora de Aventura</a>
+                  <a href="../../show/ben-10-omniverse/" class="nav-menu-link" title="Ben 10: Omniverse">Ben 10: Omniverse</a>
+                  <a href="../../show/un-show-mas/" class="nav-menu-link" title="Un Show Más">Un Show M&aacute;s</a>
+          </div>
+      </div>
+    <div class="contenedor">
+    </div>
+    <p class="links">
+        <a href="http://www.longislandprogrammingpros.com" target="_blank" title="Información de Marcas Registradas">Información de Marcas Registradas</a>
+        &nbsp; | &nbsp;
+        <a href="../../privacyPolicy/" target="_blank" title="Política de Privacidad">Política de Privacidad</a>
+        &nbsp; | &nbsp;
+        <a href="../../termsOfUse/" target="_blank" title="Términos de Uso">Términos de Uso</a>
+            &nbsp; | &nbsp;
+            <a href="http://www.turnerargentina.com/" target="_blank">Turner Argentina</a>
+    </p>
+    <p class="copy">El uso de este site significa la aceptación de los términos de uso. TM & 2014 Cartoon Network. Una compañía Time Warner.<br/>CartoonNetworkla.com es parte de Turner Sports y Entertainment Digital Network. Powered by DMT Latin America</p>
+    <img class="legales" src="../../toonla/images/cn30/site/static/img/modulos/footer/logo_legales.png" width="220" height="35" alt="Cartoon Network"/>
+</div><!-- END modulo.siteFooter -->
+<!-- BEGIN modulo.lightbox -->
+<div id="lightbox">
+    <div class="overlay"></div>
+    <!-- BEGIN modulo.lightboxUsuarioInexistente -->
+    <div id="lightboxUsuarioInexistente" class="lightbox lightboxRecuperaDatos">
+        <a class="cerrar-btn">
+            <img src="../../toonla/images/cn30/site/static/img/modulos/lightboxes/bt-cerrar.jpg" alt="CERRAR" width="21" height="21"/>
+            CERRAR
+        </a>
+        <div class="personaje"></div>
+        <div class="top">
+            <div class="title">¡BIENVENIDO FORASTERO!</div>
+            <p class="txt">Este Toonix aún no forma parte de la comunidad Cartoon. ¡Únete a nosotros!</p>
+            <a class="quiero-crear-mi-toonix-btn" href="/">
+                <img src="../../toonla/images/cn30/site/static/img/modulos/contentPicker/filtro/ver-todas-flecha.gif" alt="Ver Todas" width="24" height="24"/>
+                QUIERO CREAR MI TOONIX
+            </a>
+        </div>
+        <div class="recuperar-datos-form">
+            <div class="pie">
+                <div class="h2">Recupera tus datos</div>
+                <p class="txt2">Completa las casillas con tus datos y te lo enviaremos a <br/> tu cuenta de correo.</p>
+                <form method="post" action="../../user/forgotPassword/">
+                    <div class="user">
+                        <input name="user" type="text" placeholder="Usuario"/>
+                        <div class="error"></div>
+                    </div>
+                    <div class="mail">
+                        <input name="mail" type="text" placeholder="E-mail"/>
+                        <div class="error"></div>
+                    </div>
+                    <input type="hidden" value="ar"/>
+                    <button class="enviar-btn" type="button"></button>
+                    <div class="cb"></div>
+                </form>
+            </div>
+        </div>
+        <div class="recuperar-datos-exito">
+            <div class="pie-exito">
+                <div class="h2 tit3">¡REVISA TU CORREO!</div>
+                <p class="txt2">Te hemos enviado un link <br/> para reestablecer tu contraseña.</p>
+                <div class="avatar"></div>
+            </div>
+        </div>
+    </div> <!-- END modulo.lightboxUsuarioInexistente -->
+    <!-- BEGIN modulo.lightboxRecuperaDatos -->
+    <div id="lightboxRecuperaDatos" class="lightbox lightboxRecuperaDatos">
+        <a class="cerrar-btn">
+            <img src="../../toonla/images/cn30/site/static/img/modulos/lightboxes/bt-cerrar.jpg" alt="CERRAR" width="21" height="21"/>
+            CERRAR
+        </a>
+        <div class="top">
+            <div class="title tit2">Recupera tus datos</div>
+            <p class="txt3">Ingresa aquí tu nombre de usuario y enviaremos tus datos a la dirección de e-mail que utilizaste para registrarte.</p>
+        </div>
+        <div class="recuperar-datos-form">
+            <div class="pie2">
+                <form method="post" action="../../user/forgotPassword/">
+                    <div class="user">
+                        <input name="user" type="text" placeholder="Usuario"/>
+                        <div class="error"></div>
+                    </div>
+                    <div class="mail">
+                        <input name="mail" type="text" placeholder="E-mail"/>
+                        <div class="error"></div>
+                    </div>
+                    <button class="enviar-btn" type="button"></button>
+                    <div class="cb"></div>
+                </form>
+            </div>
+        </div>
+        <div class="recuperar-datos-exito">
+            <div class="pie-exito">
+                <div class="h2 tit3">¡REVISA TU CORREO!</div>
+                <p class="txt2">Te hemos enviado un link <br/> para reestablecer tu contraseña.</p>
+                <div class="avatar"></div>
+            </div>
+        </div>
+    </div> <!-- END modulo.lightboxRecuperaDatos -->
+    <!-- BEGIN modulo.lightboxCreditsPopup -->
+<div id="lightboxCreditsPopup" class="lightbox">
+    <a class="cerrar-btn">
+        <img src="../../toonla/images/cn30/site/static/img/modulos/lightboxes/bt-cerrar.jpg" alt="CERRAR" width="21" height="21"/>
+        CERRAR
+    </a>
+    <div class="personaje"></div>
+    <div class="top fixed">
+        <div class="title tit">AGREGA CREDITOS</div>
+        <p>Elige la manera de agregar créditos a tu cuenta.</p>
+    </div>
+    <div class="screen_1 variable">
+        <!--<a class="btn-add-sms">AGREGAR POR SMS</a>-->
+        <a class="btn-add-code">TENGO UN CÓDIGO</a>
+    </div>
+    <div class="add-credits-sms">
+        <div class="pie-exito">
+            <div class="h2 tit3">ENVIA "CN {USERNAME}" AL 35050</div>
+        </div>
+        <a class="btn-add-sms load-success-sms">
+            <img src="../../toonla/images/cn30/site/static/img/modulos/contentPicker/filtro/ver-todas-flecha.gif" alt="Ver Todas" width="24" height="24">
+            YA CARGUÉ MIS CRÉDITOS
+        </a>
+        <a class="btn-common btn-terms">TERMINOS Y CONDICIONES</a>
+    </div>
+    <div class="terms">
+        <div class="top_terms">
+            <p class="h2 tit3">Términos y Condiciones</p>
+            <p class="text">Disponible para Movistar y Personal. Valor del mensaje enviado hasta 2...</p>
+        </div>
+        <a class="btn-common btn-terms-cancel">Cancelar</a>
+    </div>
+    <div class="load_code_container">
+            <div class="recuperar-datos-form">
+                <div class="pie">
+                    <p class="h2">CARGA TU CÓDIGO AQUÍ</p>
+                    <div class="messages-code-promotion">
+                        <div class="txt1 success_load_promo_code">CARGA DE CÓDIGO EXITOSA!</div>
+                        <div class="error_promo_code promotional_code_min_characters">debes ingresar un código correcto</div>
+                        <div class="error_promo_code promotional_code_code_doesnt_exist">El código ingresado no existe</div>
+                        <div class="error_promo_code promotional_code_user_doesnt_exist">El usuario no existe o debes loguearte nuevamente.</div>
+                        <div class="error_promo_code promotion_not_available">la promoción no esta activa aún, o ya expiró</div>
+                        <div class="error_promo_code promotion_not_available_for_feed">la promoción no esta disponible para este feed.</div>
+                        <div class="error_promo_code promotional_code_unique_user_already_use_code">Este código ya lo utilizaste.</div>
+                        <div class="error_promo_code promotional_code_multiple_limit_reached">Este código alcanzó el límite máximo de usos</div>
+                    </div>
+                    <form id="promotional-code-modal" method="post" data-service-url="/user/add-promotional-code">
+                        <div class="code_input">
+                            <input name="code" type="text" placeholder="CÓDIGO"/>
+                            <div class="error"></div>
+                        </div>
+                        <input type="hidden" value="ar"/>
+                        <button class="enviar-btn" type="button"></button>
+                        <div class="cb"></div>
+                    </form>
+                </div>
+            </div>
+            <div class="recuperar-datos-exito load-code-credits-success">
+                <div class="pie-exito">
+                    <div class="h2 tit3">¡REVISA TU CORREO!</div>
+                    <p class="txt2">Te hemos enviado un link <br/> para reestablecer tu contraseña.</p>
+                    <div class="avatar"></div>
+                </div>
+            </div>
+        <a class="btn-common btn-load-code-cancel">Cancelar</a>
+    </div>
+</div>
+    <!-- END modulo.lightboxCreditsPopup -->
+    <!-- BEGIN modulo.lightboxPreferenciasGuardadas.php -->
+    <div id="lightboxPreferenciasGuardadas" class="lightbox">
+        <a class="cerrar-btn">
+            <img src="../../toonla/images/cn30/site/static/img/modulos/lightboxes/bt-cerrar.jpg" alt="CERRAR" width="21" height="21"/>
+            CERRAR
+        </a>
+        <div class="personaje"></div>
+        <div class="top">
+            <div class="title tit">PREFERENCIAS GUARDADAS</div>
+            <p>Sus preferencias fueron guardadas correctamente.</p>
+        </div>
+        <div class="footButtonsCont">
+            <a href="/" class="footButton btn-aceptar">ACEPTAR</a>
+        </div>
+    </div>
+    <!-- END modulo.lightboxPreferenciasGuardadas.php -->
+    <!-- BEGIN modulo.lightboxUsuarioInexistente -->
+<div id="lightboxSocialNonExistentUser" class="lightbox lightboxRecuperaDatos">
+    <a class="cerrar-btn">
+        <img src="../../toonla/images/cn30/site/static/img/modulos/lightboxes/bt-cerrar.jpg" alt="CERRAR" width="21" height="21"/>
+        CERRAR
+    </a>
+    <div class="personaje"></div>
+    <div class="top">
+        <div class="title">GUARDA TU TOONIX</div>
+        <p class="txt">Para guardar tu Toonix debes loguearte o crear una cuenta si aún no la tienes.</p>
+        <a class="quiero-crear-mi-toonix-btn" href="/">
+            <img src="../../toonla/images/cn30/site/static/img/modulos/contentPicker/filtro/ver-todas-flecha.gif" alt="Ver Todas" width="24" height="24"/>
+            REGISTRATE
+        </a>
+    </div>
+    <div class="login-datos-form">
+        <div class="pie">
+            <div class="h2">YA TENGO UN TOONIX</div>
+            <form method="post" action="../../user/login/">
+                <div class="user">
+                    <input name="user" type="text" placeholder="Usuario"/>
+                    <div class="error"></div>
+                </div>
+                <div class="password">
+                    <input name="password" type="password" placeholder="Contraseña"/>
+                    <div class="error"></div>
+                </div>
+                <input type="hidden" value="ar"/>
+                <button class="enviar-btn" type="button"></button>
+                <div class="cb"></div>
+            </form>
+        </div>
+    </div>
+    <div class="recuperar-datos-exito">
+        <div class="pie-exito">
+            <div class="h2 tit3">¡REVISA TU CORREO!</div>
+            <p class="txt2">Te hemos enviado un link <br/> para reestablecer tu contraseña.</p>
+            <div class="avatar"></div>
+        </div>
+    </div>
+    <div class="form-hidden">
+        <form id="save-avatar-and-register" action="/" method="POST">
+            <input type="hidden" name="avatar">
+        </form>
+    </div>
+</div> <!-- END modulo.lightboxUsuarioInexistente -->
+</div> <!-- END modulo.lightbox -->
+        <script type="text/javascript">
+            var CNLAInitQueue = [];
+            var CNConfig = {
+                version: "201209111513",
+                domain: "http://www.cartoonnetwork.com.ar/",
+                feed: "ar",
+                country: "ar",
+                feedTimezoneID: "America/Argentina/Buenos_Aires",
+                lang: "es",
+                scheduleFeed: "CNLA_AR",
+                scheduleTimezoneID: "America/Argentina/Buenos_Aires",
+                cdnPath: "http://tbsila.cdn.turner.com/toonla/images/cn30/site/",
+                validateUsernameServiceURL: "/user/is-valid-username",
+                avatarPartsList : "/avatar/parts-list",
+                gameListServiceURL: "/game/find-games-with-challenges",
+                creditsServiceURL: {
+                    createToken: "/user/create-token",
+                    addCredit: "/user/add-credit",
+                    addPromotionalCode: "/user/add-promotional-code"
+                },
+                videoPlayerURL: "http://www.kaltura.com/kwidget/wid/_618292/ui_conf_id/6956612",
+                kalturaCrossDomainReader: "http://tbsila.cdn.turner.com/toonla/images/cn30/site/static/swf/MiniVideo/CrossDomainReader.swf",
+                miniGamesList: [
+                    "http://tbsila.cdn.turner.com/toonla/images/cn30/site/static/swf/MiniGame/es/basket.swf",
+                    "http://tbsila.cdn.turner.com/toonla/images/cn30/site/static/swf/MiniGame/es/collapse.swf",
+                    "http://tbsila.cdn.turner.com/toonla/images/cn30/site/static/swf/MiniGame/es/running.swf",
+                    "http://tbsila.cdn.turner.com/toonla/images/cn30/site/static/swf/MiniGame/es/reveal.swf",
+                    "http://tbsila.cdn.turner.com/toonla/images/cn30/site/static/swf/MiniGame/es/line.swf",
+                    "http://tbsila.cdn.turner.com/toonla/images/cn30/site/static/swf/MiniGame/es/whack.swf"
+                ],
+                omniture: {
+                    controller: "user",
+                    action: "profile",
+                    contentMetrics: ""
+                }
+            };
+        </script>
+        <script src="../../ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+<script src="../../toonla/images/cn30/site/static/bundle-bundle_cnlibrary_defer.min.js" type="text/javascript"></script>
+<script src="../../ajax/libs/swfobject/2.2/swfobject.js" type="text/javascript"></script>
+<script src="../../download_webplayer-3.x/3.0/uo/UnityObject.js" type="text/javascript"></script>
+<script src="../../toonla/images/cn30/site/static/bundle-bundle_metrics_defer.min.js" type="text/javascript"></script>
+<script src="../../toonla/images/cn30/site/static/bundle-bundle_gamification_defer.min.js" type="text/javascript"></script>
+<script src="../../toonla/images/cn30/site/static/bundle-bundle_uiComplete_defer.min.js" type="text/javascript"></script>
+<script src="../../toonla/images/cn30/site/static/bundle-bundle_forms_defer.min.js" type="text/javascript"></script>
+<script src="../../toonla/images/cn30/site/static/js/cn30inlinejs.min.js" type="text/javascript"></script>
+<script src="../../toonla/images/cn30/site/static/bundle-bundle_userProfile_defer.min.js" type="text/javascript"></script>
+    </body>
+</html>
