@@ -5,3 +5,5 @@ This Repository is for making a functional avatar editor of the toonix cn websit
 
 Disclamer!!!
 This Project Isnt Afiliated to Juansecu´s OpenToonix.
+
+Current Status = In Process
