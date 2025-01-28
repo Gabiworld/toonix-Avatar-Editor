@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<version>1.1.0</version>
+	<showSharePanel>false</showSharePanel>
+	<showCreditsPanel>true</showCreditsPanel>
+	<backgrounds>
+		<path>${cdnPath}backgrounds/01.png</path>
+		<path>${cdnPath}backgrounds/02.png</path>
+		<path>${cdnPath}backgrounds/03.png</path>
+		<path>${cdnPath}backgrounds/04.png</path>
+		<path>${cdnPath}backgrounds/05.png</path>
+		<path>${cdnPath}backgrounds/06.png</path>
+		<path>${cdnPath}backgrounds/07.png</path>
+	</backgrounds>
+	<dictionary>
+		<path country="ru" fullName="Russia">${cdnPath}xml/avatarEditorDict.ru.xml</path>
+		<path country="la" fullName="LA.com English">${cdnPath}xml/avatarEditorDict.es.xml</path>
+		<path country="ar" fullName="Argentina">${cdnPath}xml/avatarEditorDict.ar.xml</path>
+		<path country="cl" fullName="Chile">${cdnPath}xml/avatarEditorDict.ch.xml</path>
+		<path country="co" fullName="Colombia">${cdnPath}xml/avatarEditorDict.co.xml</path>
+		<path country="mx" fullName="Mexico">${cdnPath}xml/avatarEditorDict.mx.xml</path>
+		<path country="ve" fullName="Venezuela">${cdnPath}xml/avatarEditorDict.ve.xml</path>
+		<path country="br" fullName="Brazil">${cdnPath}xml/avatarEditorDict.br.xml</path>
+		<path country="pt" fullName="Portugal">${cdnPath}xml/avatarEditorDict.pt.xml</path>
+		<path country="za" fullName="Africa">${cdnPath}xml/avatarEditorDict.za.xml</path>
+		<path country="nl" fullName="Paises Bajos">${cdnPath}xml/avatarEditorDict.nl.xml</path>
+		<path country="hu" fullName="Hungría">${cdnPath}xml/avatarEditorDict.hu.xml</path>
+		<path country="bg" fullName="Bulgaria">${cdnPath}xml/avatarEditorDict.bg.xml</path>
+	    <path country="ro" fullName="Rumania">${cdnPath}xml/avatarEditorDict.ro.xml</path>
+		<path country="dk" fullName="Dinamarca">${cdnPath}xml/avatarEditorDict.dk.xml</path>
+		<path country="se" fullName="Suecia">${cdnPath}xml/avatarEditorDict.se.xml</path>
+		<path country="no" fullName="Noruega">${cdnPath}xml/avatarEditorDict.no.xml</path>
+		<path country="tr" fullName="Turquia">${cdnPath}xml/avatarEditorDict.tr.xml</path>
+		<path country="es" fullName="España">${cdnPath}xml/avatarEditorDict.es.xml</path>
+		<path country="fr" fullName="France">${cdnPath}xml/avatarEditorDict.fr.xml</path>
+		<path country="de" fullName="Deutschland">${cdnPath}xml/avatarEditorDict.de.xml</path>
+		<path country="pl" fullName="Polonia">${cdnPath}xml/avatarEditorDict.pl.xml</path>
+		<path country="it" fullName="Italia">${cdnPath}xml/avatarEditorDict.it.xml</path>
+		<path country="uk" fullName="Gran Bretaña">${cdnPath}xml/avatarEditorDict.uk.xml</path>
+		<path country="ab" fullName="Arabia Saudita">${cdnPath}xml/avatarEditorDict.ab.xml</path>
+		<path country="sa" fullName="Sudeste Asiatico">${cdnPath}xml/avatarEditorDict.sa.xml</path>
+		<path country="in" fullName="India">${cdnPath}xml/avatarEditorDict.in.xml</path>
+		<path country="au" fullName="Australia">${cdnPath}xml/avatarEditorDict.au.xml</path>
+		
+	</dictionary>
+	<environments>
+		<env id="PROD">
+			<baseUrl>www.cartoonnetworkla.com</baseUrl>
+			<searchString>cartoonnetwork</searchString>
+		</env>
+	</environments>
+	<defaultAvatar>
+		<position>FRONT</position>
+		<headColor>0xFFFFFF</headColor>
+		<bodyColor>0xFFFFFF</bodyColor>
+		<skinColor>0xFFFFFF</skinColor>
+	</defaultAvatar>
+	<emotions>
+		<emotion default="true">
+			<name>emotion_idle</name>
+			<path>${cdnPath}emotions/emotion_idle_2.swf</path>
+		</emotion>
+		<emotion>
+			<name>emotion_new_jump</name>
+			<path>${cdnPath}emotions/emotion_new_jump.swf</path>
+		</emotion>
+		<emotion>
+			<name>emotion_checkout</name>
+			<path>${cdnPath}emotions/emotion_checkout.swf</path>
+		</emotion>
+		<emotion>
+			<name>emotion_rstart</name>
+			<path>${cdnPath}emotions/emotion_rstart.swf</path>
+		</emotion>
+		<emotion>
+			<name>emotion_rloop</name>
+			<path>${cdnPath}emotions/emotion_rloop.swf</path>
+		</emotion>
+		<emotion>
+			<name>emotion_rend</name>
+			<path>${cdnPath}emotions/emotion_rend.swf</path>
+		</emotion>
+	</emotions>
+</config>
