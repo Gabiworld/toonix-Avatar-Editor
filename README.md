@@ -1,9 +1,9 @@
 # Open-Source Toonix Avatar Editor
-Incomplete Toonix Avatar Editor (Functional!)
+Incomplete Toonix Avatar Editor (NOT WORKING ATM)
 
-This Repository is for making a functional avatar editor of the toonix cn website
+the project was made private but now its back, not working btw
 
-Disclamer!!!
-This Project Isnt Afiliated to Juansecu´s OpenToonix.
+-Disclamer-
+This oroject isn't afiliated to Juansecu´s OpenToonix.
 
 Current Status = In Process
